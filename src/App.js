@@ -2,14 +2,20 @@ import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import PageContainer from "./containers/PageContainer";
 import VideoContainer from "./containers/VideoContainer";
+import { Route, Routes } from "react-router-dom";
+import Home from "pages/Home";
 
 function App() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="flex">
+      <div className="flex flex-row">
         <VideoContainer></VideoContainer>
-        <PageContainer></PageContainer>
+        <PageContainer>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </PageContainer>
       </div>
     </div>
   );
