@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="flex flex-row">
+      <div className="flex flex-row justify-end mt-20">
         <VideoContainer></VideoContainer>
         <PageContainer>
           <Routes>

@@ -4,7 +4,7 @@ import GreenButton from "../main/GreenButton";
 
 const Navbar = () => {
   return (
-    <div className="w-full h-20 flex flex-row shadow-md">
+    <div className="w-full h-20 flex flex-row shadow-md fixed top-0 bg-white">
       <div className="flex items-center justify-end px-4 h-full w-[6%]">
         <img
           className="w-12 h-12"
