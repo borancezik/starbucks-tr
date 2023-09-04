@@ -1,3 +1,4 @@
+import Footer from "components/footer/Footer";
 import HomeContent from "components/home/HomeContent";
 import GreenButton from "components/main/GreenButton";
 import React from "react";
@@ -74,6 +75,7 @@ const Home = () => {
           img={item?.img}
         ></HomeContent>
       ))}
+      <Footer></Footer>
     </div>
   );
 };
