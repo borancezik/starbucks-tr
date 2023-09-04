@@ -1,7 +1,12 @@
 import React from "react";
+import FooterAccordion from "./FooterAccordion";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div>
+      <FooterAccordion></FooterAccordion>
+    </div>
+  );
 };
 
 export default Footer;
