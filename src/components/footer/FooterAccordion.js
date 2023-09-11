@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function FooterAccordion() {
+export default function FooterAccordion({ SubItems, Title, PanelName }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -13,30 +13,25 @@ export default function FooterAccordion() {
   };
 
   return (
-    <div>
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
-      >
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-        >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>
-            Hakkımızda
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            <div className="flex flex-col items-start justify-center">
-              <span>Tarihçe</span>
-              <span>Şirketimiz</span>
-              <span>Mağazalarımız</span>
-            </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <Accordion
+      expanded={expanded === PanelName}
+      onChange={handleChange(PanelName)}
+      sx={{ boxShadow: 0 }}
+    >
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Typography sx={{ width: "33%", flexShrink: 0, fontSize: 23 }}>
+          {Title}
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          <div className="flex flex-col items-start justify-center text-sm">
+            {SubItems.map((item, index) => (
+              <span key={index}>{item?.Title}</span>
+            ))}
+          </div>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
   );
 }
