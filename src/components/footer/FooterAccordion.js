@@ -26,12 +26,15 @@ export default function FooterAccordion() {
           <Typography sx={{ width: "33%", flexShrink: 0 }}>
             Hakkımızda
           </Typography>
-          <Typography sx={{ color: "text.secondary" }}>
-            I am an accordion
-          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>ssss.</Typography>
+          <Typography>
+            <div className="flex flex-col items-start justify-center">
+              <span>Tarihçe</span>
+              <span>Şirketimiz</span>
+              <span>Mağazalarımız</span>
+            </div>
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>

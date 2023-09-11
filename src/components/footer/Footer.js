@@ -3,7 +3,8 @@ import FooterAccordion from "./FooterAccordion";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-white w-full">
+      sadsadsa
       <FooterAccordion></FooterAccordion>
     </div>
   );
